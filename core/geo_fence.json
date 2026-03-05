@@ -1,0 +1,12 @@
+{
+  "spec": "v260209.2",
+  "current_session": "DBUG 260305 (1)",
+  "location": "Singapore",
+  "constraints": {
+    "zero_china_dependencies": "mandatory for worldwide distribution",
+    "openai_dormant_until": "2026-02-28",
+    "copilot_dormant_until": "2026-02-28",
+    "ue5_global_compliance": "validated (UE5.7)"
+  },
+  "status": "COMPLIANT"
+}

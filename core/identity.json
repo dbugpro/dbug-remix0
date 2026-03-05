@@ -1,0 +1,10 @@
+{
+  "spec": "v260209.2",
+  "identities": {
+    "user": "dbug.",
+    "core_authority": "admin.",
+    "runtime_authority": "adminq.",
+    "universal_core_identity": "dbug."
+  },
+  "enforce_trailing_period": true
+}

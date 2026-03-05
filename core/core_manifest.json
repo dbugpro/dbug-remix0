@@ -1,0 +1,11 @@
+{
+  "version": "v260209.2",
+  "continuity_handoff": "ACTIVE",
+  "preserved_state": [
+    "identity.json",
+    "privilege_gates.json",
+    "geo_fence.json",
+    "session_protocol.json"
+  ],
+  "singularity": ".beta"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "dbug-remix0",
+  "description": "Next generation administrative control interface.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

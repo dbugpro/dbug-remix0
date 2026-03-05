@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- Primary Meta Tags -->
+    <title>dbug. | Advanced Administrative Control</title>
+    <meta name="title" content="dbug. | Advanced Administrative Control" />
+    <meta name="description" content="Next generation administrative control interface for modern operations. Precision engineered. Beautifully executed." />
+    <meta name="theme-color" content="#38bdf8" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dbug.io/" />
+    <meta property="og:title" content="dbug. | Advanced Administrative Control" />
+    <meta property="og:description" content="Next generation administrative control interface for modern operations." />
+    <meta property="og:image" content="https://picsum.photos/seed/dbug/1200/630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="dbug. | Advanced Administrative Control" />
+    <meta property="twitter:description" content="Next generation administrative control interface for modern operations." />
+    <meta property="twitter:image" content="https://picsum.photos/seed/dbug/1200/630" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22a%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%22%233b82f6%22/><stop offset=%22100%25%22 stop-color=%22%231d4ed8%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22url(%23a)%22/><path d=%22M30 30h40v40H30z%22 fill=%22none%22 stroke=%22white%22 stroke-width=%228%22 stroke-linejoin=%22round%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22white%22/></svg>" />
+
+    <!-- Preload Critical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <style>
+      /* Prevent FOUC and provide immediate dark background */
+      html, body {
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* Initial loading indicator */
+      .initial-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #38bdf8;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      .initial-loader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .loader-ring {
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Simple initial loader that will be replaced by React -->
+    <div id="initial-loader" class="initial-loader">
+      <div class="loader-ring"></div>
+    </div>
+
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Simple script to fade out the loader once the app is ready
+      // React will mount to #root and we can hide this after a short delay
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          setTimeout(() => {
+            loader.classList.add('fade-out');
+          }, 500);
+        }
+      });
+    </script>
+  </body>
+</html>

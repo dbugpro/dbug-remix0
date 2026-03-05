@@ -1,0 +1,14 @@
+{
+  "spec": "v260209.2",
+  "session_id": "DBUG 260305 (1)",
+  "topology": "Unified",
+  "sync_mechanisms": ["Git", "MAGICUBE_Isolation"],
+  "project_workspace": "./bugworld2026",
+  "log_aggregation": {
+    "base_path": "C:\\dev\\sessions\\<session_id>\\",
+    "current_session": "C:\\dev\\sessions\\DBUG_260305_1\\",
+    "logs": "C:\\dev\\sessions\\DBUG_260305_1\\logs\\",
+    "continuity": "C:\\dev\\sessions\\DBUG_260305_1\\continuity\\",
+    "assets": "C:\\dev\\sessions\\DBUG_260305_1\\assets\\"
+  }
+}
